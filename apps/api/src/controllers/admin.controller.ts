@@ -111,6 +111,7 @@ export const getAllMedicines = async (req: AuthenticatedRequest, res: Response):
       }
     });
   } catch (err) {
+    console.error('Error in getAllMedicines:', err);
     res.status(500).json({ error: 'Internal server error' });
   }
 };
